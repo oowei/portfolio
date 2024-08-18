@@ -1,0 +1,297 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.navbar img {
+    background-color: white;
+    border-radius: 50%;
+    height: 80px; /* Adjust size as needed */
+    width: 80px; /* Adjust size as needed */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    opacity: 0.8;
+}
+
+.navbar-links {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #ddd;
+}
+
+.igline{
+	margin: 10px ;
+	position: fixed;
+	right: 0;
+	top: 45%;
+    z-index: 1000;
+}
+.igline img {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+.logotop {	/*回頁面開頭*/
+    width: 60px;
+    height: 60px;
+	margin: 0;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+	display: inline-block;
+	z-index:1000;
+}
+/*以上通用ˋ*/
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+    text-align: center;
+    
+    color: white;
+}
+
+.section.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#section1 {
+    background-image: url('/images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: none;
+}
+#section2 {
+    transition: opacity 1s ease-out; /* Only opacity transition */
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 50px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    
+    border: 0.5px solid rgb(193, 193, 193);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    opacity: 1; 
+}
+
+.btn:hover {
+    background-color: #ffffff40 ;
+}
+
+
+.background-overlay img, 
+.background-overlay h1, 
+.background-overlay p , 
+.background-overlay a.btn {
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+    transform: scale(0.9);
+}
+.section.active .background-overlay img, 
+.section.active .background-overlay h1, 
+.section.active .background-overlay p , 
+.section.active .background-overlay a.btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.center-image {
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
+    padding: 5px;
+    border-radius: 50%;
+    margin-top: 60px;
+    box-shadow: 0 0 0 0.5px white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+
+.onPerTA {
+    height: 100vh;
+    border-collapse: collapse;
+}
+
+/*作品table*/
+.project-table {
+    color: white;
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+.TaLeft1 {
+    width: 130px;
+}
+.TaLeft2 {
+    width: 3px;
+}
+
+.TaSpace0 {
+    height: 3px;
+}
+.TaSpace {
+    height: 30px;
+} 
+.TaTitle {
+    height: 20px;
+    text-align:left;
+    padding: 15px;
+    font-weight:bold;
+}
+.TaContent {
+    height: 200px;
+    text-align: left;
+    padding: 15px;
+}
+
+.bottom {
+    border-bottom: 0.5px solid rgb(100, 100, 100); 
+}
+.left {
+    border-left: 0.5px solid  rgb(100, 100, 100); 
+}
+
+
+/*table裡的project*/
+.project_link {
+    display: block;
+    text-decoration: none; /*消除底線*/
+    color: inherit; 
+}
+.project {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50px;
+    padding: 25px;
+    box-sizing: border-box; 
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.project h2 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    padding: 10px;
+    height: auto; /* Let the height adjust to the content */
+}
+.project_info {
+    margin-left: 10px;
+    flex: 1;
+}
+
+/*pro標籤*/
+.typeskill {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.type {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    display: inline-block;
+}
+.skill {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.projectphoto {
+    display: block;
+    margin: 5% 30% 5% 15%;
+    width: 380px;
+    border-radius: 10px;
+}
+
+
+/*聯絡資訊*/
+.perTable {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100vw;
+    border-collapse: collapse;
+}
+
+.perTable div { 
+    width: 150px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin: 20px ;
+}
+.perTable img {
+    height: 30px;
+    width: 30px;
+}
+

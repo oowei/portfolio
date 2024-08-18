@@ -1,0 +1,344 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.navbar img {
+    margin-top: -40px;
+    background-color: white;
+    border-radius: 50%;
+    height: 80px; 
+    width: 80px; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    opacity: 0.8;
+}
+
+.navbar-links {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #ddd;
+}
+
+.igline{
+	margin: 10px ;
+	position: fixed;
+	right: 0;
+	top: 45%;
+    z-index: 1000;
+}
+.igline img {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+.logotop {	/*回頁面開頭*/
+    width: 60px;
+    height: 60px;
+	margin: 0;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+	display: inline-block;
+	z-index:1000;
+}
+/*以上通用ˋ*/
+
+.pro_info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+
+    position: relative;
+    /* gap: 10px; Add space between items */
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure full width to align h2 and p */
+}
+.title-wrapper h2 {
+    margin-left:6.5%;
+    text-align: center; /* Center text inside h2 */
+    flex: 1; /* This will take up the available space */
+}
+.title-wrapper p {
+    margin-right: 3%;
+    white-space: nowrap; /* Prevents the date from wrapping */
+}
+
+.projectTop {
+    width: 100%; 
+}
+
+.typeskill {
+    display: flex;
+    gap: 10px;
+    margin: -10px;
+}
+.type {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    display: inline-block;
+}
+.skill {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.pro_info h3 {
+    margin: 130px 0 40px ;
+}
+.pro_sp {
+    display: flex;
+    margin: 0 150px;
+    
+    gap: 85px;
+}
+
+.pro_sp div{
+    width: 350px;
+    height: 200px;
+    border-radius: 50px;
+    border: 1px solid rgb(100, 100, 100);
+
+    align-items: center; 
+    text-align: center;
+    margin: 5px;
+}
+.pro_sp p {
+    margin: 40px;
+    text-align: center;
+}
+.pro_function {
+    border-radius: 50px;
+    border: 1px solid rgb(100, 100, 100);
+    
+    padding: 50px;
+}
+.pro_function img {
+    border-radius: 50px;
+    width:70vw;
+}
+
+
+/**/
+.pro_ui {
+    position: relative;
+    width: 100vw;
+    min-height: 580vh;
+}
+.pro_ui_img {
+    width: 55vw;
+    width: 800px; 
+    height: auto;
+    display: block;
+    margin: 5% 5% 100% 8%;
+} 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable interactions with the overlay */
+}
+
+.media {
+    position: absolute;
+    width: 15vw; /* Adjust size as needed */
+    height: auto; /* Adjust size as needed */
+    pointer-events: auto; /* Enable interactions within media elements */
+    border-radius: 10px; /* Ensure border radius consistency */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translate(-50, -50); /* Center the media element */
+}
+.no-media {
+    position: absolute;
+    width: 15vw; /* Adjust size as needed */
+    height: auto; /* Adjust size as needed */
+    pointer-events: auto; /* Enable interactions within media elements */
+    border-radius: 10px; /* Ensure border radius consistency */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translate(-50, -50); /* Center the media element */
+}
+
+.vimg, .hover-video {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+.hover-video {
+    display: none;
+}
+
+.media:hover .hover-video {
+    display: block;
+}
+
+.media:hover .vimg {
+    display: none;
+}
+.media p {
+    width: 320px;
+    margin: 30px 0 0 0 ;
+}
+
+
+
+/**** other ok****/
+.other {
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    gap: 15px; /* 项目间距 */
+    padding: 45px 5vw; /* 左右添加视窗相对距离 */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+}
+.project_link {
+    display: block;
+    text-decoration: none; /*消除底線*/
+    color: inherit; 
+}
+.project {
+    color: white;
+    width:22vw;
+    height: 100%;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50px;
+    padding: 25px;
+    box-sizing: border-box; 
+
+    display: flex;
+    align-items: flex-start;
+    scroll-snap-align: start;
+}
+.project h3 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    padding: 10px;
+    height: auto;
+}
+.project_info {
+    margin-left: 10px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%; 
+}
+
+
+.projectphoto {
+    max-width: 100%;
+    max-height: 100%; 
+    object-fit: contain; 
+    margin: auto; 
+}
+
+/****per****/
+.TaLeft1 {
+    width: 130px;
+}
+.TaLeft2 {
+    width: 3px;
+}
+
+.TaSpace0 {
+    height: 3px;
+}
+.TaSpace {
+    height: 30px;
+} 
+.TaTitle {
+    height: 20px;
+    text-align:left;
+    padding: 15px;
+    font-weight:bold;
+}
+.TaContent {
+    text-align: left;
+    padding: 15px;
+}
+
+.bottom {
+    border-bottom: 0.5px solid rgb(100, 100, 100); 
+}
+.left {
+    border-left: 0.5px solid  rgb(100, 100, 100); 
+}
+/**/
+.perTable {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100vw;
+    border-collapse: collapse;
+}
+.perTable div { 
+    width: 150px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin: 20px ;
+}
+.perTable img {
+    height: 30px;
+    width: 30px;
+}
